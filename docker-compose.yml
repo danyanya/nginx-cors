@@ -1,0 +1,14 @@
+version: '3'
+services:
+    nginx-cors:
+        build: .
+        image: danyanya/nginx-cors
+        ports:
+            - ${CORS_PORT}:80
+        environment:
+            - TARGET_DOMAIN=${TARGET_DOMAIN}
+            - HEALTHCHECK_URL=${HEALTHCHECK_URL}
+        restart: always
+        command: sh /start.sh 
+        logging:
+            driver: "none"
