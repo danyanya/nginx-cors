@@ -10,7 +10,7 @@ It’s needed when docker restarts and brakes connection with upstream (502 Bad 
 
 Clone in and launch by docker-compose with needed TARGET_DOMAIN and HEALTHCHECK_URL (and exposed CORS_PORT as well): 
 
-```
+```bash
 # cat docker-compose.yml
 version: '3'
 services:
